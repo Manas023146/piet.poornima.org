@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PIET JAIPUR</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+    <style>
+      /* Add animations to cards */
+      .card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s step-end, transform 0.5s step-end;
+      }
+
+      .card {
+        background-color: #444444;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+        /* Scale up the card on hover */
+        .card:hover {
+          background-color: #2E3192;
+    transform: scale(1.05) translateZ(10px);
+  }
+    
+      /* Apply animations when cards are in view */
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      /* Animate cards when they come into view */
+      .animate-fade-in {
+        animation: fadeIn 1s forwards;
+      }
+
+      #highlights{
+        background-image: url('https://img.freepik.com/free-photo/abstract-blur-defocused-bookshelf-library_1203-9640.jpg?w=996&t=st=1683827576~exp=1683828176~hmac=d0fb2fca939164478e9c446e0f496df1e6f421b6ee4c31e95c94fd1c899476f3');
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="preloader"></div>
+    <button id="scrollToTopBtn"><img src="images/uparrow.jpg" style="height: 3vh; width: 3vh;"></button>
+     <!--                  Header                       -->
+     <div id="Header"></div>
+    
+    
+
+     <!--                    Navbar                       -->
+     <div id="Navbar"  style="position: sticky; top: 0; z-index: 100;"></div>
+
+  <!--                    carausels                    -->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="600">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/hc/c2.png" class="d-block w-100" alt="..." style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c1.jpg" class="d-block w-100" alt="..." style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c3.png" class="d-block w-100" alt="..." style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c4.jpg" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c5.jpg" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c6.jpg" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c7.png" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c9.jpg" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c10.png" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c11.jpg" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hc/c12.jpg" class="d-block w-100" alt="..."style="height: 70vh;">
+      </div>
+    
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!--                                    About Us Section                     -->
+  <!-- <section class="about py-5 bg-dark" style="margin: auto; ">
+    <div class="container">
+      <h2 class="heading-h2 text-center text-light" style="background-color: #444444;">PIET In Numbers</h2>
+      <div class="text-center"><svg width="54" height="5" viewBox="0 0 54 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="" class="topicon replaced-svg">
+  <rect width="54" height="5" fill="#2E3192"></rect>
+  </svg></div>
+
+  <div id="faculty" class="row row-cols-1 row-cols-md-4 g-4" style="margin: 10vh;">
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">RTU Rank</h4>
+          <h5>3rd</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">AICTE Rank</h4>
+          <h5>Platinum</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h5 style="text-decoration: underline solid;">Offering streams</h5>
+          <h5>6</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">Facilities</h4>
+          <h5>100+</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">Students</h4>
+          <h5>1300+</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">MOU's</h4>
+          <h5>15+</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">Industry Partners</h4>
+          <h5>10+</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">SCI\Scopus Publications</h4>
+          <h5>50+</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">UGC Publications</h4>
+          <h5>100+</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h5>Multimedia Auditorium with 500+ Seating Capacity</h5>  
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">Published Patents</h4>
+          <h5>40+</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+          <h4 style="text-decoration: underline solid;">Granted Patents</h4>
+          <h5>10+</h5>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+            <h4>Supporting Tutor Mentor System</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+            <h4>1.22cr+ Research Grant Received</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+            <h4>NAAC Accredited Institute from 2019</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-light" style="background-color: #444444;">
+        <div class="card-body">
+            <h5>First Private Institution for having NBA in Civil Engg. 
+            </h5>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="about py-5" style="margin: auto; background-color: #949292;; ">
+    <div class="container">
+      <h2 class="heading-h2 text-center text-light" style="background-color: #444444;">POORNIMA INSTITUTE OF ENGINEERING
+        AND TECHNOLOGY</h2>
+      <div class="text-center"><svg width="54" height="5" viewBox="0 0 54 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="" class="topicon replaced-svg">
+          <rect width="54" height="5" fill="#2E3192"></rect>
+        </svg></div>
+
+      <div class="row pt-4">
+        <div class="col-md-4 aos-init aos-animate" data-aos="fade-right" data-aos-duration="3000">
+          <img src="images/about-img1.png" alt="about" class="img-fluid">
+        </div>
+        <div class="col-md-8 align-self-center pt-4 pt-md-0 aos-init aos-animate" data-aos="fade-left" data-aos-duration="3000">
+          <p class="mb-0 text-dark" style="font-size: xx-large; text-align: justify;">Poornima Institute of
+            Engineering &amp; Technology, was established in 2007 with the aim of imparting pragmatic technical
+            education. In its magnificent journey of 17 years, PIET has set benchmarks and reached at new pinnacles in
+            Engineering Education with dedication, perseverance
+            and devotion. PIET is spearheading its outstanding voyage with the motto 'Success is not a destination, it's
+            a journey'.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--        Piet in numbers -->
+  <section class="about py-5 bg-dark" style="margin: auto; ">
+    <div class="container">
+      <h2 class="heading-h2 text-center text-light" style="background-color: #444444;">PIET In Numbers</h2>
+      <div class="text-center"><svg width="54" height="5" viewBox="0 0 54 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="" class="topicon replaced-svg">
+  <rect width="54" height="5" fill="#2E3192"></rect>
+  </svg></div>
+  <section class="counter-section">
+    <div class="container">
+        <div class="row" style="background-color: #444444; color: white;">
+            <!---Rank------->
+            <div class="col-md-3 counter-box" >
+              <h2>4th</h2>
+              <p>Ranked by RTU</p>
+          </div>
+            <!-- Students -->
+            <div class="col-md-3 counter-box" >
+                <h2><span id="studentCount">0</span>+</h2>
+                <p>Students</p>
+            </div>
+            <!-- Teachers -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="teacherCount">0</span>+</h2>
+                <p>Teachers and Staff</p>
+            </div>
+            <!-- Years -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="yearCount">0</span>+</h2>
+                <p>Years</p>
+            </div>
+            <!-- MOUs -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="mouCount">0</span>+</h2>
+                <p>MOU's</p>
+            </div>
+            <!-- Industry Partners -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="partnersCount">0</span>+</h2>
+                <p>Industry Partners</p>
+            </div>
+            <!-- Published Patents -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="publishedPatentsCount">0</span>+</h2>
+                <p>Published Patents</p>
+            </div>
+            <!-- Granted Patents -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="grantedPatentsCount">0</span>+</h2>
+                <p>Granted Patents</p>
+            </div>
+            <!-- Research Grant -->
+            <div class="col-md-3 counter-box">
+                <h2>1.70cr+</h2>
+                <p>Research Grant Received</p>
+            </div>
+            <!-- SCI/Scopus Publications -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="scopusPublicationsCount">0</span>+</h2>
+                <p>SCI/Scopus Publications</p>
+            </div>
+            <!-- UGC Publications -->
+            <div class="col-md-3 counter-box">
+                <h2><span id="ugcPublicationsCount">0</span>+</h2>
+                <p>UGC Care Publications</p>
+            </div>
+            <!-- Multimedia Auditorium -->
+            <div class="col-md-3 counter-box">
+              <h2><span id="multimediaCount">0</span>+</h2>
+                <p>State of Art Classrooms, Labs and Halls</p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</section>
+
+  <!--                    Notice section                      -->
+  <div class=" p-5 rounded mt-3" style="margin: 5vw; display: grid;">
+    <h1>Notice</h1>
+    <div class="text-left"><svg width="54" height="5" viewBox="0 0 54 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="" class="topicon replaced-svg">
+      <rect width="54" height="5" fill="black"></rect>
+      </svg></div>
+
+      <main class="container mb-5">
+        <div class="bg-light p-5 rounded mt-3" style="box-shadow: 2px 2px 2px 2px ;">
+          <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                  Notices 2023-24
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2023-24/Minority_Cell_2023-24.pdf">Minority Cell_2023-24.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2023-24/Notice_Anti-ragging-2023-24.pdf">Notice - Anti-ragging-2023-24.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2023-24/Notification_for_ISTE_STUDENT_AWARDS_2023.pdf">Notification for ISTE STUDENT AWARDS 2023.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2023-24/SC-ST-OBC_Grievance_Cell_2023-24.pdf">SC-ST-OBC Grievance Cell_2023-24.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2023-24/SGRC_2023-24.pdf">SGRC  2023-24.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2023-24/WRC-2023-24.pdf">ICC-2023-24.pdf</a> </li>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Notices 2022-23
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/Enrl_Notice_for_Open_Cat&Bio_Data_Form_2022_23.pdf"> Enrl
+                      Notice for Open Cat &amp; Bio Data Form _2022_23.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/II_Mid_Term_Debarred_Notice_of_B.Tech.IISem_2022-23.pdf">
+                      II Mid Term Debarred Notice of B.Tech. II Sem 2022-23.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/NOTICE-Anti-ragging_PIETADMlNl2022_2023.pdf"> NOTICE -
+                      Anti- ragging_PIETADMlNl2022_2023.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/Notice_for_Branch_Change_of_B.Tech-I_Year_students.pdf">
+                      Notice for Branch Change of B.Tech. - I Year students (Enrolled in Session 2021-22) &amp; will be studying
+                      in B.Tech. II Year Session 2022-23 subject to approval by RTU, Kota.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/Notice_for_RTU_Revaluation_for_B.Tech.VII-Sem.pdf">
+                      Notice for RTU Revaluation for B.Tech.VII-Semester (Main &amp; Back) &amp; to View Answer Copy_ Session
+                      2022-23..docx</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/Notice_for_Suspension-HIMANSHU_RANA.pdf"> Notice for
+                      Suspension - HIMANSHU RANA.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/Notice_Regarding_Renewal_Scholarships.pdf">
+                      Notice Regarding Renewal Scholarships for Academic Session 2022-23 under PMSSS.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2022-23/Notice_regarding_reschedule_of_B.TechIII&V_Semester_Examination_2022-2023.jpg">
+                      Notice regarding reschedule of B.Tech III &amp; V Semester Examination 2022-2023.jpg</a> </li>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                  Notices 2021-22
+                </button>
+              </h2>
+              <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/Branch_Change_session_2021-22.pdf"> Branch Change session
+                      2021-22.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/Branch_Change_session_PIETADMIN2021-22.pdf">
+                      Branch Change session PIETI2021-22.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/II_Mid_Term_Debarred_Notice_of_B.TechIV_Sem_2021-22.pdf">
+                      II Mid Term Debarred Notice of B.Tech. IV Sem 2021-22.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/NOTICE-Anti-ragging_2021-22.pdf"> NOTICE - Anti
+                      -ragging_2021-22.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/Notice_Constitution_of_Campus_Level_Internal_Complaints_Committee.pdf">Notice
+                      - Constitution of Campus Level Internal Complaints Committee.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/Notice_for_Suspension_Letter_no.PIET Admin_21-22.pdf">
+                    Notice_for_Suspension_Letter_no.PIET Admin_21-22</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/Regarding_Library_Book_submission_ Library_Notice_2021-22.pdf">
+                      Regarding Library Book submission_ Library Notice_2021-22.pdf</a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2021-22/VIII_Sem_Debarred_List_I_Mid_Term_2021-22.pdf"> VIII Sem
+                      Debarred List_I Mid Term_2021-22.pdf</a> </li>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
+                  Notices 2020-21
+                </button>
+              </h2>
+              <div id="collapsethree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/British_Council_Scholarship_for_Women_in_STEM_2020_21.pdf">
+                      British Council Scholarship for Women in STEM_2020_21.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/Celebration_of_GANDHI_JAYANTI_AND_SHASTRI_JAYANTI.pdf">
+                      Celebration of GANDHI JAYANTI AND SHASTRI JAYANTI along with 02 Oct 2020, Gandhi Jayanti.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/Formation_of_SCSTOBC_Monitoring_Cell_in_the_College_for_Redressal_2020-21.pdf">
+                      Formation of SC-ST-OBC Monitoring Cell in the College for Redressal 2020-21.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/Minority_Notice_2020_21.pdf"> Minority Notice 2020_21.pdf
+                    </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/Regarding_Centre_City_Change_for_B.Tech_I&III_Sem_Students_ 2020-21.pdf">
+                      Regarding Centre City Change for B.Tech I &amp; III Sem Students_ 2020-21.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/REVISED_FIRST_MIDTERM_EXAMINATION_TIME_TABLE_OF_B.TECH_II_SEM_2020-21.pdf">
+                      REVISED FIRST MIDTERM EXAMINATION TIME TABLE OF B.TECH. II SEM 2020-21.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/RTU_Examination_Notice_II_Semester_Back&Reback_2020-21.pdf">
+                      RTU Examination Notice II Semester Back &amp; Reback 2020-21.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/RTU_Examination_Notice_IV_Semester_Back&Reback2020-21.pdf">
+                      RTU Examination Notice IV Semester Back &amp; Reback2020-21.pdf </a> </li>
+                  <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2020-21/VIII_Semester_Examination_Guidelines_issued_by_RTU.pdf"> VIII
+                      Semester Examination Guidelines issued by RTU.pdf </a> </li>
+      
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
+                  Notices 2019-20
+                </button>
+              </h2>
+              <div id="collapsetwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" >
+                <div class="accordion-body">
+                  <ul>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2019-20/NOTICE_FOR_CHANGE_OF_BRANCH_2019-20.pdf"> NOTICE FOR CHANGE
+                        OF BRANCH_2019-20.pdf </a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2019-20/Notice_for_RTU_Revaluation_for_B.TechI-Sem.pdf"> Notice
+                        for RTU Revaluation for B.Tech. I-Sem.pdf</a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2019-20/Notice_for_RTU_Revaluation_for_B.TechV-Sem.pdf"> Notice
+                        for RTU Revaluation for B.Tech. V-Sem.pdf </a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2019-20/Report_of_blood_Donation_05.09.19.pdf"> Report of blood
+                        Donation 05.09.19.pdf</a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2019-20/Uploads_for_Lockdown_Period.pdf"> Uploads for Lockdown
+                        Period (1)</a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Notices 2018-19
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" >
+                <div class="accordion-body">
+                  <ul>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2018-19/Appoinment_for_coordinator_club.pdf">
+                        Appointement as Coordinator for Club activities </a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2018-19/Appointment_as_Incharge_for_updating_on_PIET_website_2018_2019.pdf">
+                        Appointment as Incharge for updating on PIET website._2018_2019_.pdf</a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2018-19/Notice-Blood-Donation-Camp.pdf"> Notice -Blood Donation
+                        Camp.pdf </a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2018-19/Notice_for_B.Tech_VI_SemExam_2018-19.pdf"> Notice for
+                        B.Tech VI Sem. Exam 2018-19.pdf </a> </li>
+                    <li> <a target="_blank" href="http://www.piet.poornima.org/PIET_NAAC_SSR/notices/2018-19/Submigsion_of_Exafnination&lmprovement_Forms_of_B.Tech.pdf">
+                        Submission of Exafnination &amp; lmprovement Forms of B.Tech.pdf </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+      </main>
+  </div>
+
+  <!-- footer   -->
+ <div id="Footer"></div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+        loader.style.display = "none";
+      })
+    </script>
+    <script src="script.js"></script>
+    <script>
+      // Add 'animate-fade-in' class to each card when it's in the viewport
+      const cards = document.querySelectorAll('.card');
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      });
+      cards.forEach((card) => {
+        cardObserver.observe(card);
+      });
+    </script>
+   <script>
+    function incrementCounters() {
+        const counters = [
+            { id: "studentCount", target: 1500 },
+            { id: "teacherCount", target: 100 },
+            { id: "yearCount", target: 15 },
+            { id: "mouCount", target: 40 },
+            { id: "partnersCount", target: 20 },
+            { id: "publishedPatentsCount", target: 100 },
+            { id: "grantedPatentsCount", target: 10 },
+            { id: "scopusPublicationsCount", target: 250 },
+            { id: "ugcPublicationsCount", target: 100 },
+            { id: "multimediaCount", target: 80 }
+        ];
+
+        counters.forEach(counter => {
+            let currentCount = 0;
+            const element = document.getElementById(counter.id);
+
+            const interval = setInterval(() => {
+                if (currentCount < counter.target) {
+                    currentCount += 10;
+                    element.textContent = currentCount;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 50); // Adjust the interval as needed (milliseconds)
+        });
+    }
+
+    window.addEventListener("load", incrementCounters);
+</script>
+  
+  </body>
+</html>
